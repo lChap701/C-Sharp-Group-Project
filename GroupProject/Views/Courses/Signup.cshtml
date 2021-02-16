@@ -4,9 +4,9 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<form>
+<form asp-controller="Courses" asp-action="Signup" method="post">
     <label>Email</label>
-    <input type="text" placeholder="Enter Email" name="email" required />
+    <input type="text" placeholder="Enter Email" name="email" requireWd />
     <br />
     <label>Password</label>
     <input type="password" placeholder="Enter Password" name="password" required />
