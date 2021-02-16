@@ -26,6 +26,9 @@ namespace GroupProject.Data
         /// </summary>
         public DbSet<Accounts> Accounts { get; set; }
 
-        // Add a property for the Courses model here
+        /// <summary>
+        /// Represents the Courses table
+        /// </summary>
+        public DbSet<Courses> Courses { get; set; }
     }
 }

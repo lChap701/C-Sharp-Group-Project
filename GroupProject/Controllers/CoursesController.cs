@@ -8,6 +8,7 @@ using GroupProject.Models;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web;
+using Microsoft.EntityFrameworkCore;
 
 namespace GroupProject.Controllers
 {
@@ -17,6 +18,11 @@ namespace GroupProject.Controllers
     public class CoursesController : Controller
     {
         private readonly GroupProjectContext _context;
+
+        public CoursesController(GroupProjectContext context)
+        {
+            _context = context;
+        }
 
         // GET: /Courses
         /// <summary>
@@ -74,24 +80,24 @@ namespace GroupProject.Controllers
             return View();
         }
 
-        // GET: /Courses/SignUp
+        // GET: /Courses/Signup
         /// <summary>
-        /// Displays the SignUp page/view
+        /// Displays the Signup page/view
         /// </summary>
         /// <returns>Returns the view</returns>
-        public IActionResult SignUp()
+        public IActionResult Signup()
         {
             return View();
         }
 
-        // POST: /Courses/SignUp
+        // POST: /Courses/Signup
         /// <summary>
         /// Attempts to sign up users for the Course Catolog
         /// </summary>
         /// <param name="_user">Represents the data that the user submitted</param>
         /// <returns>Returns the view</returns>
         [HttpPost, ValidateAntiForgeryToken]
-        public ActionResult SignUp(Accounts _user)
+        public ActionResult Signup(Accounts _user)
         {
             // Check if any errors occur
             if (ModelState.IsValid)
@@ -136,7 +142,5 @@ namespace GroupProject.Controllers
 
             return hash;
         }
-
-        // Insert method for the Courses view here
     }
 }
