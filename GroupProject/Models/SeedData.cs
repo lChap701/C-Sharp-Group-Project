@@ -24,7 +24,7 @@ namespace GroupProject.Models
                 serviceProvider.GetRequiredService<
                     DbContextOptions<GroupProjectContext>>());
 
-            // Checks if any Byte Jam events are in the DB
+            // Checks if any accounts are in the DB
             if (context.Accounts.Any())
             {
                 return; // means that the DB has been seeded
@@ -35,14 +35,37 @@ namespace GroupProject.Models
                 {
                     Username = "user1",
                     Email = "email@gmail.com",
-                    Password = "p@sSw0rD"
+                    Password = "p@sSw0rD",
+                    IsAdmin = 'Y'
                 },
                 new Accounts
                 {
                     Username = "user2",
                     Email = "example@gmail.com",
-                    Password = "p@sSw0rD12"
+                    Password = "p@sSw0rD12",
+                    IsAdmin = 'Y'
                 }
+            );
+        }
+
+        /// <summary>
+        /// Adds default data to the Courses table when no data is present
+        /// </summary>
+        /// <param name="serviceProvider">Used to provide custom support to objects</param>
+        public static void InitializeCourses(IServiceProvider serviceProvider)
+        {
+            using var context = new GroupProjectContext(
+                serviceProvider.GetRequiredService<
+                    DbContextOptions<GroupProjectContext>>());
+
+            // Checks if any courses are in the DB
+            if (context.Courses.Any())
+            {
+                return; // means that the DB has been seeded
+            }
+
+            context.Courses.AddRange(
+
             );
         }
     }
