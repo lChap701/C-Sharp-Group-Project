@@ -2,7 +2,86 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Slabo 27px', serif;
+        background: #000;
+    }
+
+    .layer1 {
+        color: white;
+    }
+
+    .bg {
+        position: relative;
+        z-index: 1;
+    }
+
+        .bg img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .bg h1 {
+            position: absolute;
+            top: 33%;
+            left: 0;
+            width: 100%;
+            font-size: 100px;
+            text-align: center;
+        }
+
+    .cont {
+        position: relative;
+        z-index: 2;
+        background: rgba(0,0,0,0.8);
+        font-size: 27px;
+        color: #fff;
+        padding: 5%;
+    }
+
+        .cont * {
+            max-width: 900px;
+            margin: 5% auto;
+        }
+</style>
+
+<div id="wrap">
+    <div class="bg">
+        <img class="layer2" src="https://zendenwebdesign.com/wp-content/uploads/2017/10/Top-7-Programing-Languages-for-Web-Development.jpg" alt="" />
+        <h1 class="layer1">Home Page</h1>
+    </div>
+    <div class="cont">
+        <p>Project8.</p><br />
+        <p>Content.</p><br />
+        <p>Content.</p><br />
+        <p>Content.</p><br />
+    </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+        var $window = $(window);
+        function scroll_elements() {
+            var scroll = $window.scrollTop();
+            var scrollLayer1 = scroll / 1.4;
+            var scrollLayer2 = scroll / 1.2;
+            $(".layer1").css(
+                "-webkit-transform", "translate3d(0," + scrollLayer1 + "px,0)",
+                "transform", "translate3d(0," + scrollLayer1 + "px,0)"
+            );
+            $(".layer2").css(
+                "-webkit-transform", "translate3d(0," + scrollLayer2 + "px,0)",
+                "transform", "translate3d(0," + scrollLayer2 + "px,0)"
+            );
+        }
+
+        $window.scroll(scroll_elements);
+    });
+</script>  
