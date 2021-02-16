@@ -19,6 +19,10 @@ namespace GroupProject.Controllers
     {
         private readonly GroupProjectContext _context;
 
+        /// <summary>
+        /// Sets the data contained in a GroupProjectContext object to a new object
+        /// </summary>
+        /// <param name="context">Represents a GroupProjectContext object</param>
         public CoursesController(GroupProjectContext context)
         {
             _context = context;
@@ -36,7 +40,7 @@ namespace GroupProject.Controllers
 
         /* 
          * The Login and SignUp views/pages use concepts from: 
-         * - https://dev.to/skipperhoa/login-and-register-using-asp-net-mvc-5-3i0g
+         * https://dev.to/skipperhoa/login-and-register-using-asp-net-mvc-5-3i0g
          */
 
         // GET: /Courses/Login

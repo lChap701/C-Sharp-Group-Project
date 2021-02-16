@@ -8,10 +8,17 @@ using System.Threading.Tasks;
 
 namespace GroupProject.Controllers
 {
+    /// <summary>
+    /// Controller for the course catalog
+    /// </summary>
     public class CatalogController : Controller
     {
         private readonly GroupProjectContext _context;
 
+        /// <summary>
+        /// Sets the data contained in a GroupProjectContext object to a new object
+        /// </summary>
+        /// <param name="context">Represents a GroupProjectContext object</param>
         public CatalogController(GroupProjectContext context)
         {
             _context = context;
