@@ -41,5 +41,10 @@ namespace GroupProject.Models
         /// </summary>
         [NotMapped, Required, Compare("Password")]
         public string ConfirmPassword { get; set; }
+
+        /// <summary>
+        /// Property for the IsAdmin column in the Accounts table
+        /// </summary>
+        public char IsAdmin { get; set; }
     }
 }
