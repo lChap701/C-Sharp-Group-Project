@@ -3,13 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Project8_GroupProject.Data;
-using Project8_GroupProject.Models;
+using GroupProject.Data;
+using GroupProject.Models;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web;
 
-namespace Project8_GroupProject.Controllers
+namespace GroupProject.Controllers
 {
     /// <summary>
     /// The main controller for this project

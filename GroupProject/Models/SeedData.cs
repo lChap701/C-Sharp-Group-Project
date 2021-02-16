@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Project8_GroupProject.Data;
-using Project8_GroupProject.Models;
+using GroupProject.Data;
+using GroupProject.Models;
 
-namespace Project8_GroupProject.Models
+namespace GroupProject.Models
 {
     /// <summary>
     /// Add default data to all tables in the DB

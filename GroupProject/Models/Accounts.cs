@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Project8_GroupProject.Models
+namespace GroupProject.Models
 {
     /// <summary>
     /// Models for the Accounts table

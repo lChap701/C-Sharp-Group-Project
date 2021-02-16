@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Project8_GroupProject.Data;
 
-namespace Project8_GroupProject
+namespace GroupProject
 {
     public class Startup
     {
