@@ -12,12 +12,28 @@ namespace GroupProject.Models
     /// </summary>
     public class Courses
     {
+        /// <summary>
+        /// Property for the CourseID column in the Courses table
+        /// </summary>
         [DatabaseGenerated(DatabaseGeneratedOption.None), Display(Name = "Course ID"), Key]
         public string CourseID { get; set; }
 
-        [Display(Name = "Course Name")]
+        /// <summary>
+        /// Property for the CourseName column in the Courses table
+        /// </summary>
+        [Display(Name = "Course Name"), Required]
         public string CourseName { get; set; }
+
+        /// <summary>
+        /// Property for the Credits column in the Courses table
+        /// </summary>
+        [Required]
         public int Credits { get; set; }
+
+        /// <summary>
+        /// Property for the Online column in the Courses table
+        /// </summary>
+        [Required]
         public bool Online { get; set; }
     }
 }

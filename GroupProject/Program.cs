@@ -19,7 +19,7 @@ namespace GroupProject
             try
             {
                 SeedData.InitializeAccounts(services);
-                //SeedData.InitializeCourses(services);
+                SeedData.InitializeCourses(services);
             }
             catch (Exception ex)
             {

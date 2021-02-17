@@ -3,7 +3,6 @@ using System.Linq;
 using GroupProject.Data;
 using GroupProject.Models;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Session;
 
 namespace GroupProject.Controllers
 {
