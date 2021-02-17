@@ -1,14 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using GroupProject.Data;
 using GroupProject.Models;
-using System.Security.Cryptography;
-using System.Text;
-using System.Web;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Session;
 
 namespace GroupProject.Controllers
 {
@@ -50,6 +45,7 @@ namespace GroupProject.Controllers
         /// <returns>Returns the view</returns>
         public IActionResult Login()
         {
+            HttpContext.Session.Clear();
             return View();
         }
 
@@ -71,6 +67,9 @@ namespace GroupProject.Controllers
                 // Checks if an account was found
                 if (data.Count > 0)
                 {
+                    var user = _context.Accounts.Where(s => (s.Username.Equals(username)) && s.Password.Equals(password)).ToList().Single();
+                    HttpContext.Session.SetString("admin", user.IsAdmin.ToString());
+
                     return RedirectToAction("Index");
                 }
                 else
@@ -105,18 +104,19 @@ namespace GroupProject.Controllers
             // Check if any errors occur
             if (ModelState.IsValid)
             {
-                var check = _context.Accounts.Where(a => a.Email != _user.Email);
+                var check = _context.Accounts.Where(a => a.Email == _user.Email && a.Username == _user.Username).ToList();
 
-                // Checks if an email address was found 
-                if (check != null)
+                // Checks if an email address and username was found 
+                if (check.Count == 0)
                 {
                     _context.Accounts.Add(_user);
                     _context.SaveChanges();
+
                     return RedirectToAction("Login");
                 }
                 else
                 {
-                    ViewBag.Error = "Email address is not unique";
+                    ViewBag.Error = "Email address or username is not unique";
                     return View();
                 }
             }
