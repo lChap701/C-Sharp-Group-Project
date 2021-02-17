@@ -14,5 +14,10 @@ namespace GroupProject.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None), Display(Name = "Course ID"), Key]
         public string CourseID { get; set; }
+
+        [Display(Name = "Course Name")]
+        public string CourseName { get; set; }
+        public int Credits { get; set; }
+        public bool Online { get; set; }
     }
 }
