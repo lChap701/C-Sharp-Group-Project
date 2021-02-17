@@ -21,19 +21,18 @@ namespace GroupProject.Models
         /// <summary>
         /// Property for the CourseName column in the Courses table
         /// </summary>
-        [Display(Name = "Course Name"), Required]
+        [Display(Name = "Course Name"), Required, StringLength(60, MinimumLength = 1)]
         public string CourseName { get; set; }
 
         /// <summary>
         /// Property for the Credits column in the Courses table
         /// </summary>
-        [Required]
+        [Required, Range(0, 4)]
         public int Credits { get; set; }
 
         /// <summary>
         /// Property for the Online column in the Courses table
         /// </summary>
-        [Required]
         public bool Online { get; set; }
     }
 }
