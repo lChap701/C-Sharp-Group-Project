@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using GroupProject.Data;
-using GroupProject.Models;
 
 namespace GroupProject.Models
 {
@@ -35,17 +34,26 @@ namespace GroupProject.Models
                 {
                     Username = "user1",
                     Email = "email@gmail.com",
-                    Password = "p@sSw0rD",
-                    IsAdmin = 'Y'
+                    Password = "0B1A253CCD667BB075C2AC0C59C0F283",
+                    IsAdmin = true
                 },
                 new Accounts
                 {
                     Username = "user2",
                     Email = "example@gmail.com",
-                    Password = "p@sSw0rD12",
-                    IsAdmin = 'Y'
+                    Password = "09F376919F350C1F1D72F7C1E3C0E43B",
+                    IsAdmin = true
+                },
+                new Accounts
+                {
+                    Username = "user3",
+                    Email = "example2@gmail.com",
+                    Password = "8475DD410845B2DCEE863938B867B8E2",
+                    IsAdmin = false
                 }
             );
+
+            context.SaveChanges();
         }
 
         /// <summary>
