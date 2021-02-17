@@ -1,18 +1,50 @@
-﻿@{
+﻿@model GroupProject.Models.Accounts
+
+@{
     ViewData["Title"] = "Sign Up";
 }
 
 <h1>@ViewData["Title"]</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Courses" asp-action="Signup" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Username)
+                @Html.TextBoxFor(m => m.Username, "", new { @class = "form-control", @placeholder = "Enter Username" })
+                @Html.ValidationMessageFor(m => m.Username, "", new { @class = "badge badge-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email, "", new { @class = "form-control", @placeholder = "Enter Email" })
+                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "badge badge-danger" })
+                @if (ViewBag.error != null)
+                {
+                    <span class="badge badge-danger">@ViewBag.error</span>
+                }
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Enter Password" })
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "badge badge-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.ConfirmPassword)
+                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", @placeholder = "Confirm Password" })
+                @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "badge badge-danger" })
+            </div>
+            <div class="form-group">
+               @Html.LabelFor(m => m.IsAdmin)
+               @Html.CheckBoxFor(m => m.IsAdmin)
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Sign Up" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
 
-<form asp-controller="Courses" asp-action="Signup" method="post">
-    <label>Email</label>
-    <input type="text" placeholder="Enter Email" name="email" requireWd />
-    <br />
-    <label>Password</label>
-    <input type="password" placeholder="Enter Password" name="password" required />
-    <br />
-    <label>Are you a admin</label>
-    <input type="checkbox" name="admin" required />
-    <br />
-    <button type="submit">Sign Up</button>
-</form>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
