@@ -109,6 +109,8 @@ namespace GroupProject.Models
                     Online = false
                 }
             );
+
+            context.SaveChanges();
         }
     }
 }
