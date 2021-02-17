@@ -44,7 +44,6 @@ namespace GroupProject.Controllers
         /// <returns>Returns the view</returns>
         public IActionResult Login()
         {
-            HttpContext.Session.Clear();
             return View();
         }
 
@@ -74,6 +73,7 @@ namespace GroupProject.Controllers
                 else
                 {
                     ViewBag.Error = "Account was not found";
+
                     return View();
                 }
             }

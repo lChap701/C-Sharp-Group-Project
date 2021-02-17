@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GroupProject.Data;
 using GroupProject.Models;
+using Microsoft.AspNetCore.Http;
+
 
 namespace GroupProject.Views.Catalog
 {
@@ -39,6 +38,9 @@ namespace GroupProject.Views.Catalog
 
             ViewData["Search"] = search;
             ViewData["Online"] = online;
+
+            // Retrieves the value in the "admin" key
+            ViewBag.Admin = bool.Parse(HttpContext.Session.GetString("admin"));
 
             // Checks if the search string is not null or empty
             if (!string.IsNullOrEmpty(search))
