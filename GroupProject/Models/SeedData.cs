@@ -73,7 +73,41 @@ namespace GroupProject.Models
             }
 
             context.Courses.AddRange(
-
+                new Courses
+                {
+                    CourseID = "CIS001",
+                    CourseName = "Intro to Logic",
+                    Credits = 3,
+                    Online = false
+                },
+                new Courses
+                {
+                    CourseID = "CIS002",
+                    CourseName = "C#",
+                    Credits = 4,
+                    Online = true
+                },
+                new Courses
+                {
+                    CourseID = "CIS003",
+                    CourseName = "COBOL II",
+                    Credits = 3,
+                    Online = true
+                },
+                new Courses
+                {
+                    CourseID = "CIS004",
+                    CourseName = "Java",
+                    Credits = 4,
+                    Online = false
+                },
+                new Courses
+                {
+                    CourseID = "CIS005",
+                    CourseName = "ASP .NET",
+                    Credits = 3,
+                    Online = false
+                }
             );
         }
     }
