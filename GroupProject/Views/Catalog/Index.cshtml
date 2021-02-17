@@ -17,7 +17,10 @@
     </div>
 
     <div class="form-group">
-        <p><label for="online">Online @Html.CheckBox("online", ViewData["Online"])</label> | <a asp-controller="Catalog" asp-action="Index">Back To Full List</a></p>
+        <p>
+            <label for="online">Online @Html.CheckBox("online", ViewData["Online"])</label> | 
+            <a asp-controller="Catalog" asp-action="Index">Back To Full List</a>
+        </p>
     </div>
 </form>
 
