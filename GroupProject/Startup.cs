@@ -23,8 +23,6 @@ namespace GroupProject
         {
             services.AddControllersWithViews();
 
-            services.AddControllersWithViews();
-
             object p = services.AddDbContext<GroupProjectContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("GroupProjectContext")));
 
@@ -32,7 +30,7 @@ namespace GroupProject
 
             services.AddSession(options =>
             {
-                options.IdleTimeout = TimeSpan.FromSeconds(10);
+                options.IdleTimeout = TimeSpan.FromSeconds(86400);  // Set to expire in a day
                 options.Cookie.HttpOnly = true;
                 options.Cookie.IsEssential = true;
             });
