@@ -34,21 +34,21 @@ namespace GroupProject.Models
                 {
                     Username = "user1",
                     Email = "email@gmail.com",
-                    Password = "0B1A253CCD667BB075C2AC0C59C0F283",
+                    Password = "p@sSw0rD",
                     IsAdmin = true
                 },
                 new Accounts
                 {
                     Username = "user2",
                     Email = "example@gmail.com",
-                    Password = "09F376919F350C1F1D72F7C1E3C0E43B",
+                    Password = "p@sSw0rD12",
                     IsAdmin = true
                 },
                 new Accounts
                 {
                     Username = "user3",
                     Email = "example2@gmail.com",
-                    Password = "8475DD410845B2DCEE863938B867B8E2",
+                    Password = "p@sSw0rD1234567",
                     IsAdmin = false
                 }
             );
