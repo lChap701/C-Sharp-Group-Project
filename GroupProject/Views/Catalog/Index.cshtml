@@ -1,9 +1,7 @@
-﻿@page
-@using Microsoft.AspNetCore.Http
-@model IEnumerable<GroupProject.Models.Courses>
+﻿@model IEnumerable<GroupProject.Models.Courses>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Catalog";
 }
 
 <h1>Index</h1>
@@ -11,9 +9,24 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
+<form asp-controller="Catalog" asp-action="Index" method="get">
+    <div class="form-group">
+        <input type="text" name="search" placeholder="Search" value="@ViewData["Search"]" />
+        <input type="submit" value="Filter" />
+    </div>
+
+    <div class="form-group">
+        <p><label for="online">Online @Html.CheckBox("online", ViewData["Online"])</label> | <a asp-controller="Catalog" asp-action="Index">Back To Full List</a></p>
+    </div>
+</form>
+
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseID)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.CourseName)
             </th>
@@ -30,6 +43,9 @@
         @foreach (var item in Model)
         {
             <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CourseID)
+                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.CourseName)
                 </td>
