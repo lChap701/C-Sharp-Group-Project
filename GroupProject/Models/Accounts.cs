@@ -39,12 +39,13 @@ namespace GroupProject.Models
         /// <summary>
         /// Property for the Confirm Password field that is used to be compared with the Password property
         /// </summary>
-        [NotMapped, Required, Compare("Password")]
+        [NotMapped, Required, Compare("Password"), Display(Name = "Confirm Password")]
         public string ConfirmPassword { get; set; }
 
         /// <summary>
         /// Property for the IsAdmin column in the Accounts table
         /// </summary>
-        public char IsAdmin { get; set; }
+        [Display(Name = "Are you an admin?")]
+        public bool IsAdmin { get; set; }
     }
 }
