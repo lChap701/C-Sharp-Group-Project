@@ -24,7 +24,7 @@ namespace GroupProject.Controllers
 
         // GET: /Courses
         /// <summary>
-        /// Displays the Home page/view (Index.cshtml)
+        /// Displays the Index view (the Catalog Page)
         /// </summary>
         /// <returns>Returns the view</returns>
         public IActionResult Index()
