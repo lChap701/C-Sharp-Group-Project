@@ -7,11 +7,8 @@
         padding: 0;
     }
 
-    body {
-        font-family: 'Slabo 27px', serif;
-    }
-
     #wrap {
+        font-family: 'Slabo 27px', serif;
         background: #000;
     }
 
@@ -66,25 +63,4 @@
         <p>The project also uses two models: Accounts and Courses. The Accounts model is used to contain all the account information of each user and specifies if a user is an admin. If a user is an admin, then they will be able to manipulate the course catalog. The Courses model contains all of the information about each course which include: the course ID, name of the course, name of the instructor, etc.</p>
     </div>
 </div>
-
-<script>
-    $(document).ready(function () {
-        var $window = $(window);
-        function scroll_elements() {
-            var scroll = $window.scrollTop();
-            var scrollLayer1 = scroll / 1.4;
-            var scrollLayer2 = scroll / 1.2;
-            $(".layer1").css(
-                "-webkit-transform", "translate3d(0," + scrollLayer1 + "px,0)",
-                "transform", "translate3d(0," + scrollLayer1 + "px,0)"
-            );
-            $(".layer2").css(
-                "-webkit-transform", "translate3d(0," + scrollLayer2 + "px,0)",
-                "transform", "translate3d(0," + scrollLayer2 + "px,0)"
-            );
-        }
-
-        $window.scroll(scroll_elements);
-    });
-</script>
 
