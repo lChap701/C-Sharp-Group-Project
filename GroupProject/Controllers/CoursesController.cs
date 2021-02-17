@@ -103,7 +103,7 @@ namespace GroupProject.Controllers
             // Check if any errors occur
             if (ModelState.IsValid)
             {
-                var check = _context.Accounts.Where(a => a.Email == _user.Email && a.Username == _user.Username).ToList();
+                var check = _context.Accounts.Where(a => a.Email == _user.Email || a.Username == _user.Username).ToList();
 
                 // Checks if an email address and username was found 
                 if (check.Count == 0)
@@ -115,7 +115,7 @@ namespace GroupProject.Controllers
                 }
                 else
                 {
-                    ViewBag.Error = "Email address or username is not unique";
+                    ViewBag.Error = "Email address and username should be unique";
                     return View();
                 }
             }
