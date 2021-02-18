@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Project8_GroupProject.Models;
+using GroupProject.Models;
 
-namespace Project8_GroupProject.Data
+namespace GroupProject.Data
 {
     /// <summary>
     /// Used to define the "context" for our database
@@ -26,6 +26,9 @@ namespace Project8_GroupProject.Data
         /// </summary>
         public DbSet<Accounts> Accounts { get; set; }
 
-        // Add a property for the Courses model here
+        /// <summary>
+        /// Represents the Courses table
+        /// </summary>
+        public DbSet<Courses> Courses { get; set; }
     }
 }

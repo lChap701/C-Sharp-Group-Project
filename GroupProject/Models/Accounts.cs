@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Project8_GroupProject.Models
+namespace GroupProject.Models
 {
     /// <summary>
     /// Models for the Accounts table
@@ -39,7 +39,13 @@ namespace Project8_GroupProject.Models
         /// <summary>
         /// Property for the Confirm Password field that is used to be compared with the Password property
         /// </summary>
-        [NotMapped, Required, Compare("Password")]
+        [NotMapped, Required, Compare("Password"), Display(Name = "Confirm Password")]
         public string ConfirmPassword { get; set; }
+
+        /// <summary>
+        /// Property for the IsAdmin column in the Accounts table
+        /// </summary>
+        [Display(Name = "Are you an admin?")]
+        public bool IsAdmin { get; set; }
     }
 }

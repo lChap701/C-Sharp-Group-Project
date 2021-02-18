@@ -1,14 +1,14 @@
 ﻿@model GroupProject.Models.Accounts
 
 @{
-    ViewData["Title"] = "Sign Up";
+    ViewData["Title"] = "Login";
 }
 
 <h1>@ViewData["Title"]</h1>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-controller="Courses" asp-action="Signup" method="post">
+        <form asp-controller="Courses" asp-action="Login" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <div class="form-group">
@@ -25,29 +25,17 @@
             </div>
 
             <div class="form-group">
-                @Html.LabelFor(m => m.Email)
-                @Html.TextBoxFor(m => m.Email, "", new { @class = "form-control", @placeholder = "Enter Email" })
-                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "badge badge-danger" })
-            </div>
-
-            <div class="form-group">
                 @Html.LabelFor(m => m.Password)
                 @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Enter Password" })
                 @Html.ValidationMessageFor(m => m.Password, "", new { @class = "badge badge-danger" })
             </div>
+
             <div class="form-group">
-                @Html.LabelFor(m => m.ConfirmPassword)
-                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", @placeholder = "Confirm Password" })
-                @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "badge badge-danger" })
+                <a asp-controller="Courses" asp-action="Signup">Sign Up</a>
             </div>
 
             <div class="form-group">
-                @Html.LabelFor(m => m.IsAdmin)
-                @Html.CheckBoxFor(m => m.IsAdmin)
-            </div>
-
-            <div class="form-group">
-                <input type="submit" value="Sign Up" class="btn btn-primary" />
+                <input type="submit" value="Login" class="btn btn-primary" />
             </div>
         </form>
     </div>
