@@ -17,6 +17,8 @@ Login and Signup views: https://dev.to/skipperhoa/login-and-register-using-asp-n
 
 Seeding: https://docs.microsoft.com/en-us/ef/core/modeling/data-seeding
 
+Sessions: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/app-state?view=aspnetcore-5.0#session-state
+
 .gitignore: https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 Old repository: https://github.com/themorticianer/Project8-TeamProject 
