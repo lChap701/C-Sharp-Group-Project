@@ -13,7 +13,7 @@ The second Index view is used to display all the courses in the course catalog. 
 ### Models
 This project mostly consists of two models: Accounts and Courses. The Accounts model is used to contain the account information of each user. It is used in the Login, Signup, and the second Index view via sessions. The Courses model is used to contain all of the information about each course. It is used in all of the views in the Catalog controller. These two models are also used in the DbContext class "GroupProjectContext" which is found in the "Data" folder. These models are seeded as well.
 ## Resources
-Login and Signup views: https://dev.to/skipperhoa/login-and-register-using-asp-net-mvc-5-3i0g
+Login and Signup views and Accounts Model: https://dev.to/skipperhoa/login-and-register-using-asp-net-mvc-5-3i0g
 
 Seeding: https://docs.microsoft.com/en-us/ef/core/modeling/data-seeding
 
