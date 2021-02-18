@@ -1,5 +1,7 @@
 # C-Sharp-Group-Project
 This project was created using ASP.NET MVC. The project requires users to login in order to view a course catalog. If they are an admin, they can make changes to the course catalog. If they are not an admin, then they can only view the course catalog.
+## wwwroot/Static Files
+So far, no changes have been made to this folder.
 ## Controllers
 This project consists of two controllers: Courses and Catalog. The Courses controller is used to handle logins, sign ups, and allows vistors to visit the Home page. These views are: Login, Signup, and Index. The Catalog controller is used to handle the course catalog. The views in this controller are: Index, Details, Create, Edit, and Delete.
 ### Views
