@@ -1,3 +1,69 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Slabo 27px', serif;
+        background: #FFF;
+    }
+
+    .layer1 {
+        color: white;
+    }
+
+    .bg {
+        position: relative;
+        z-index: 1;
+    }
+
+        .bg img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .bg h1 {
+            position: absolute;
+            top: 33%;
+            left: 0;
+            width: 100%;
+            font-size: 100px;
+            text-align: center;
+        }
+
+    .cont {
+        position: relative;
+        z-index: 2;
+        background: rgba(0,0,0,0.8);
+        font-size: 27px;
+        color: #fff;
+        padding: 5%;
+    }
+
+        .cont * {
+            max-width: 900px;
+            margin: 5% auto;
+        }
+</style>
+
+<div id="wrap">
+    <div class="bg">
+        <img class="layer2" src="https://zendenwebdesign.com/wp-content/uploads/2017/10/Top-7-Programing-Languages-for-Web-Development.jpg" alt="" />
+        <h1 class="layer1">Home Page</h1>
+    </div>
+    <div class="cont">
+        <p>Project8.</p><br />
+        <p>Welcome to our version of your Project 8 C# Project.</p><br />
+        <p>Participants.</p>
+        <p>Luc Rurup</p>
+        <p>Alex Reed</p>
+        <p>Lucas Chapman</p>
+        <p>Luis Rodriguez</p>
+    </div>
+</div>  
