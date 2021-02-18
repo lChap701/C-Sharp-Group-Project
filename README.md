@@ -1,7 +1,7 @@
 # C-Sharp-Group-Project
 This project was created using ASP.NET MVC. The project requires users to login in order to view a course catalog. If they are an admin, they can make changes to the course catalog. If they are not an admin, then they can only view the course catalog.
 ## Sessions
-This project uses sessions to determine if the user is an admin or not. All sessions last up to a day.
+This project uses sessions to determine if the user is an admin or not. All sessions are set to expire in a day.
 ## wwwroot/Static Files
 So far, no changes have been made to this folder.
 ## Controllers
