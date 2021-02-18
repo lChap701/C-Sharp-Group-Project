@@ -3,7 +3,7 @@ This project was created using ASP.NET MVC. The project requires users to login 
 ## Sessions
 This project uses sessions to determine if the user is an admin or not. All sessions are set to expire in a day.
 ## wwwroot/Static Files
-So far, no changes have been made to this folder.
+So far, no changes have been made.
 ## Controllers
 This project consists of two controllers: Courses and Catalog. The Courses controller is used to handle logins, sign ups, and allows vistors to visit the Home page. These views are: Login, Signup, and Index. The Catalog controller is used to handle the course catalog. The views in this controller are: Index, Details, Create, Edit, and Delete.
 ### Views
