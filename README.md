@@ -15,6 +15,6 @@ This project mostly consists of two models: Accounts and Courses. The Accounts m
 ## Resources
 Login and Signup views: https://dev.to/skipperhoa/login-and-register-using-asp-net-mvc-5-3i0g
 
-.gitignore: https://github.com/lChap701/gitignore/blob/master/VisualStudio.gitignore
+.gitignore: https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 Old repository: https://github.com/themorticianer/Project8-TeamProject 
