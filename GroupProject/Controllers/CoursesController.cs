@@ -63,8 +63,7 @@ namespace GroupProject.Controllers
             // Checks if any errors occurred
             if (ModelState.IsValid)
             {
-                var data = _context.Accounts.Where(s => s.Username.Equals(username.Trim()) && s.Password.Equals(password.Trim()))
-                            .ToList();
+                var data = _context.Accounts.Where(s => s.Username.Equals(username.Trim()) && s.Password.Equals(password.Trim())).ToList();
 
                 // Checks if an account was found
                 if (data.Count > 0)
